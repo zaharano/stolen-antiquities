@@ -4,7 +4,7 @@ import type { PageServerLoad } from './$types.js';
 export const load: PageServerLoad = async ({ fetch }) => {
 	// Load the tenRandom
 	// const object = await fetchElementWithField(randomHighlightURL(), 'primaryImage', fetch);
-	const localSet = await fetch('/fullData.json');
+	const localSet = await fetch('~/fullData.json');
 
 	const objects = (await localSet.json()) as MuseumObject[];
 
